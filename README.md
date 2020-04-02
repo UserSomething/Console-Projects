@@ -1,3 +1,3 @@
 # Console-Projects
 
-The code: ConsoleProjects.sln
+The code is in: ConsoleProjects.sln
