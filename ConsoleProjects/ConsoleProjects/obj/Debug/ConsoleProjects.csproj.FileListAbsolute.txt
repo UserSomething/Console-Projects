@@ -5,3 +5,10 @@ C:\Users\Pavle\source\repos\ConsoleProjects\ConsoleProjects\obj\Debug\ConsolePro
 C:\Users\Pavle\source\repos\ConsoleProjects\ConsoleProjects\obj\Debug\ConsoleProjects.csproj.CoreCompileInputs.cache
 C:\Users\Pavle\source\repos\ConsoleProjects\ConsoleProjects\obj\Debug\ConsoleProjects.exe
 C:\Users\Pavle\source\repos\ConsoleProjects\ConsoleProjects\obj\Debug\ConsoleProjects.pdb
+C:\Users\Pavle\Documents\GitHub\Console-Projects\ConsoleProjects\ConsoleProjects\bin\Debug\ConsoleProjects.exe.config
+C:\Users\Pavle\Documents\GitHub\Console-Projects\ConsoleProjects\ConsoleProjects\bin\Debug\ConsoleProjects.exe
+C:\Users\Pavle\Documents\GitHub\Console-Projects\ConsoleProjects\ConsoleProjects\bin\Debug\ConsoleProjects.pdb
+C:\Users\Pavle\Documents\GitHub\Console-Projects\ConsoleProjects\ConsoleProjects\obj\Debug\ConsoleProjects.csprojAssemblyReference.cache
+C:\Users\Pavle\Documents\GitHub\Console-Projects\ConsoleProjects\ConsoleProjects\obj\Debug\ConsoleProjects.csproj.CoreCompileInputs.cache
+C:\Users\Pavle\Documents\GitHub\Console-Projects\ConsoleProjects\ConsoleProjects\obj\Debug\ConsoleProjects.exe
+C:\Users\Pavle\Documents\GitHub\Console-Projects\ConsoleProjects\ConsoleProjects\obj\Debug\ConsoleProjects.pdb

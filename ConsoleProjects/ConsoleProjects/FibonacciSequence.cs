@@ -5,6 +5,22 @@ namespace ConsoleProjects
 {
     class FibonacciSequence
     {
+        private bool restartProgramMethod(bool restartProgramVariable)
+        {
+            string restartProgramQuestion = "\nDo you want to restart the program? (Y)es or (N)o.";
+
+            Console.WriteLine(restartProgramQuestion);
+            string userAnswer = Console.ReadLine();
+
+            if (userAnswer.Equals("y") || userAnswer.Equals("Y"))
+                restartProgramVariable = true;
+            else if (userAnswer.Equals("n") || userAnswer.Equals("N"))
+                restartProgramVariable = false;
+
+            return restartProgramVariable;
+        }
+
+
         /*Descripion:
          The Fibonacci sequence:
          "0, 1, 1, 2, 3, 5, 8, 13, 21, 34"*/
@@ -54,69 +70,72 @@ namespace ConsoleProjects
 
 
             //Real code:
-            Console.Write("Hello! Write how many Fibonacci Numbers you want to be shown: ");
-            string userInputNumber = Console.ReadLine();
+            bool restartProgram = false;
 
-            bool checkUserInput = int.TryParse(userInputNumber, out int numAmount);
-
-            if (checkUserInput)
+            do
             {
-                if (numAmount < 0)
+                Console.Clear();
+
+                Console.Write("Hello! Write how many Fibonacci Numbers you want to be shown: ");
+                string userInputNumber = Console.ReadLine();
+
+                bool checkUserInput = long.TryParse(userInputNumber, out long numAmount);
+
+                if (checkUserInput)
                 {
-                    Console.WriteLine("Only natural numbers please!");
+                    if (numAmount < 0)
+                    {
+                        Console.WriteLine("Only natural numbers please!");
 
-                    Console.ReadKey();
-                    System.Environment.Exit(0);
+                        restartProgram = restartProgramMethod(restartProgram);
+                    }
+
+                    if (numAmount == 0)
+                    {
+                        Console.WriteLine("Currently showing zero numbers!");
+
+                        restartProgram = restartProgramMethod(restartProgram);
+                    }
+                    if (numAmount == 1)
+                    {
+                        Console.WriteLine("0");
+
+                        restartProgram = restartProgramMethod(restartProgram);
+                    }
+                    if (numAmount == 2)
+                    {
+                        Console.WriteLine("0");
+                        Console.WriteLine("1");
+
+                        restartProgram = restartProgramMethod(restartProgram);
+                    }
+
+                    numAmount -= 2;
+
+                    List<long> fibonacciList = new List<long>();
+                    fibonacciList.Add(0);
+                    fibonacciList.Add(1);
+
+                    for (int i = 0; i < numAmount; i++)
+                    {
+                        long nextFibNumber = fibonacciList[i] + fibonacciList[i + 1];
+
+                        fibonacciList.Add(nextFibNumber);
+                    }
+
+                    fibonacciList.ForEach(num => Console.WriteLine("{0}", num));
+
+                    restartProgram = restartProgramMethod(restartProgram);
                 }
-
-                if (numAmount == 0)
+                else
                 {
-                    Console.WriteLine("Currently showing zero numbers!");
+                    Console.WriteLine("Only numbers can be used here!");
 
-                    Console.ReadKey();
-                    System.Environment.Exit(0);
+                    restartProgram = restartProgramMethod(restartProgram);
                 }
-                if (numAmount == 1)
-                {
-                    Console.WriteLine("0");
+            } while (restartProgram);
 
-                    Console.ReadKey();
-                    System.Environment.Exit(0);
-                }
-                if (numAmount == 2)
-                {
-                    Console.WriteLine("0 1");
-
-                    Console.ReadKey();
-                    System.Environment.Exit(0);
-                }
-
-                numAmount -= 2;
-
-                var fibonacciList = new List<int>();
-                fibonacciList.Add(0);
-                fibonacciList.Add(1);
-
-                for (int i = 0; i < numAmount; i++)
-                {
-                    int nextFibNumber = fibonacciList[i] + fibonacciList[i + 1];
-
-                    fibonacciList.Add(nextFibNumber);
-                }
-
-                fibonacciList.ForEach(num => Console.Write("{0} ", num));
-
-                Console.ReadKey();
-                System.Environment.Exit(0);
-            }
-            else
-            {
-                Console.WriteLine("Only number can be used here!");
-
-                Console.ReadKey();
-                System.Environment.Exit(0);
-            }
-
+            System.Environment.Exit(0);
         }
     }
 }

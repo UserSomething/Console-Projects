@@ -4,8 +4,8 @@
     {
         static void Main(string[] args)
         {
-            CreditCardValidator cardValidator = new CreditCardValidator();
-            cardValidator.StartValidation();
+            FibonacciSequence fibonacci = new FibonacciSequence();
+            fibonacci.StartSequence();
         }
     }
 }
