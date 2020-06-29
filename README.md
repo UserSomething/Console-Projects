@@ -1,3 +1,3 @@
 # Console-Projects
 
-The code is in: ConsoleProjects.sln
+The code is in: ConsoleProjects.sln -> ConsoleProjects -> FibonacciSequence or CreditCardValidator
